@@ -54,8 +54,8 @@ $(document).ready(function(){
             slidesToScroll: 1,
             arrows: true,
             //infinite:false,
-            centerMode: true,
-            variableWidth: true,
+           // centerMode: true,
+            //variableWidth: true,
             responsive: [
                 {
                     breakpoint: 1200,
@@ -91,6 +91,105 @@ $(document).ready(function(){
     $('.slick_btn_group .slick_next').click(function(){
         $('.serv_slider').slick('slickNext');
     });
+
+
+    $('.review_item').each(function(){
+        var more=$(this).find('.more');
+        var show_more=$(this).find('.show_more');
+        $(show_more).on('click', function(){
+            if($(more).is(':visible')){
+                $(more).slideUp();
+                $(show_more).text('Читать далее');
+            }else{
+                $(more).slideDown();
+                $(show_more).text('Свернуть');
+            }
+        });
+    });
+
+    if($('.reviews_slider .review_item').length >1){
+        $('.reviews_slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            dots:false,
+            infinite:false,
+            //speed: 1000,
+            //autoplay: true,
+            //autoplaySpeed: 2000,
+            responsive: [
+
+                {
+                    breakpoint: 767,
+                    settings: {
+                        dots:true,
+                    }
+                }
+            ]
+        });
+    }
+
+
+
+    if($(".clients_slider > div").length >4){
+        $('.clients_slider').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            arrows: true,
+            infinite:false,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 2,
+
+                    }
+                }
+            ]
+        });
+    }
+
+
+
+   if($(".team_slider > div").length >3){
+        $('.team_slider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+            //infinite:false,
+            //centerMode: true,
+           //variableWidth: true,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+
+                    }
+                },
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1,
+                        dots:true,
+                    }
+                }
+            ]
+        });
+    }
+
 
 
     $(window).resize(function(){
