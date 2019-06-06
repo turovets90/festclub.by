@@ -191,6 +191,44 @@ $(document).ready(function(){
     }
 
 
+    if($(".other_offers_list > div").length >3){
+        $('.other_offers_list').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+            //infinite:false,
+            //centerMode: true,
+            //variableWidth: true,
+            responsive: [
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1,
+                       // dots:true,
+                    }
+                }
+            ]
+        });
+    }
+
+
+
+    $('#show_more').on('click', function(){
+        if($('#more').is(':visible')){
+            $('#more').slideUp();
+            $(this).text('Читать далее');
+        }else{
+            $('#more').slideDown();
+            $(this).text('Свернуть');
+        }
+    });
+
 
     $(window).resize(function(){
         var header = $('header').outerHeight();
