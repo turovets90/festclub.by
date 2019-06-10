@@ -1578,7 +1578,7 @@ background: url(../img/pr_bg.png);
   background: #fff;
 }
 
-.reviews_slider{
+.reviews_list{
   .review_item{
     background: #FFFFFF;
     .box-shadow(0 8px 24px rgba(7, 9, 11, 0.08));
@@ -1595,6 +1595,9 @@ background: url(../img/pr_bg.png);
       picture{
         display: inline-block;
         margin-bottom: 18px;
+        img{
+          max-height: 100px;
+        }
       }
       .r_name{
         color: #AFAFAF;
@@ -3917,4 +3920,36 @@ h1.page_title{
   background-size: 100%;
   background-position: top;
   background-repeat: no-repeat;
+}
+
+
+.reviews_list.row{
+  margin: 0 -7px 25px;
+  @media (max-width:767px){
+    margin: 0 -7px 10px;
+  }
+  > div{
+    padding: 0 7px;
+    margin-bottom: 35px;
+    @media (max-width:767px){
+      margin-bottom: 15px;
+    }
+  }
+  .review_item{
+    border: 1px solid #EAEBEE;
+    box-shadow: none;
+    .transition(@transition_default);
+    &:hover, &:focus{
+      border: 1px solid #fff;
+      .box-shadow(0 8px 24px rgba(7,9,11,0.08));
+    }
+    .review_content{
+      padding: 35px;
+      margin-bottom: 0;
+      @media (max-width:767px){
+        padding:15px;
+        margin-bottom: 15px;
+      }
+    }
+  }
 }
