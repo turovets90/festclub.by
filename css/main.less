@@ -2766,6 +2766,13 @@ h1.page_title{
       margin-bottom: 30px;
     }
   }
+
+  .our_team{
+    .sub_title.text-uppercase{
+      margin-top: 0;
+    }
+  }
+
 }
 
 
@@ -3130,6 +3137,15 @@ h1.page_title{
 
 
   &.has_nav{
+    >div{
+      margin-bottom: 45px;
+      @media (max-width:1200px){
+        margin-bottom: 30px;
+      }
+      @media (max-width:767px){
+        margin-bottom: 15px;
+      }
+    }
       .item{
         .wrap();
         padding: 40px;
@@ -3148,6 +3164,7 @@ h1.page_title{
           }
           .text{
             margin-left: 35px;
+            text-align: left;
             @media (min-width:768px){
               font-size: 24px;
               line-height: 29px;
@@ -3157,6 +3174,7 @@ h1.page_title{
             }
             @media (max-width:767px){
               margin-left: 0;
+              text-align: center;
             }
           }
         }
@@ -3266,6 +3284,7 @@ h1.page_title{
       line-height: 22px;
       color: @dark;
       font-weight: @bold;
+      padding: 0 30px;
       @media (max-width:767px){
         font-size: 16px;
         line-height: 19px;
@@ -3728,7 +3747,7 @@ h1.page_title{
   .sub_title.text-uppercase, .section_title{
     color: #fff;
   }
-  
+
 
   &:before{
     content: '';
@@ -3741,4 +3760,69 @@ h1.page_title{
   }
 }
 
+.scheme_of_work_block{
+  margin-bottom: 110px;
+  .sub_title.text-uppercase{
+    margin-top: 0;
+  }
+  @media (max-width:1200px){
+      display: none;
+  }
+}
+
+.scheme_of_work{
+  > div{
+    .flex();
+    .ai-center();
+    .j-beetween();
+    .block{
+      background: #F47D39;
+      .border-radius(5px);
+      position: relative;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: @bold;
+      height: 90px;
+      .flex();
+      .ai-center();
+      .j-center();
+      text-align: center;
+      padding: 5px 30px;
+
+      &:before{
+        .b_a();
+        width: 100%;
+        height: 100%;
+        right: -5px;
+        bottom: -5px;
+        background: #F06838;
+        .border-radius(5px);
+        z-index: -1;
+      }
+    }
+
+    &.d_flex1{
+
+      .block{
+        width: 280px;
+      }
+    }
+    &.d_flex2{
+      padding: 20px 80px;
+    }
+    &.d_flex3{
+      .nowrap{
+        white-space: nowrap;
+      }
+      .block{
+        padding: 5px 20px;
+      }
+      img{
+        margin: 0 10px;
+      }
+    }
+  }
+
+}
 
