@@ -230,6 +230,27 @@ $(document).ready(function(){
     });
 
 
+
+
+    if($('.k2_slider > div').length >1){
+        $('.k2_slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            dots:true,
+            responsive: [
+                {
+                    breakpoint: 767,
+                    settings: {
+                        arrows: false,
+                    }
+                }
+            ]
+        });
+    }
+
+
+
     $(window).resize(function(){
         var header = $('header').outerHeight();
 
