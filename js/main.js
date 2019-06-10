@@ -251,6 +251,72 @@ $(document).ready(function(){
 
 
 
+    if($(".programs_slider > div").length >3){
+        $('.programs_slider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+            //infinite:false,
+            //centerMode: true,
+            //variableWidth: true,
+            responsive: [
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1,
+                        // dots:true,
+                    }
+                }
+            ]
+        });
+    }
+
+
+    if($(".portfolio_slider > div").length >3){
+        $('.portfolio_slider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+            centerMode: true,
+            centerPadding: '20%',
+            //infinite:false,
+            //centerMode: true,
+            //variableWidth: true,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 2,
+                        centerMode: true,
+                        centerPadding: '183px',
+                    }
+                },
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1,
+                        centerPadding: 0,
+                        // dots:true,
+                    }
+                }
+            ]
+        });
+    }
+
+
+
     $(window).resize(function(){
         var header = $('header').outerHeight();
 
