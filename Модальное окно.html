@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Частные праздники</title>
+    <title>Модальное окно</title>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
@@ -138,166 +138,51 @@
         </div>
       </div>
     </nav>
-    <section class="main_slider page_slider">
-      <div>
-        <div class="slider_item" style="background-image:url(img/baner2.png)"><a href="#"></a>
-          <div class="container">
-            <div class="slider_caption">
-              <div class="title">Свадьба<br> вашей мечты 1</div>
-              <div class="sub_title">Проведение свадьбы Вашей мечты в окружении природы!</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="slider_item" style="background-image:url(img/baner2.png)"><a href="#"></a>
-          <div class="container">
-            <div class="slider_caption">
-              <div class="title">Свадьба<br> вашей мечты 2</div>
-              <div class="sub_title">Проведение свадьбы Вашей мечты в окружении природы!</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="slider_item" style="background-image:url(img/baner2.png)"><a href="#"></a>
-          <div class="container">
-            <div class="slider_caption">
-              <div class="title">Свадьба<br> вашей мечты 3</div>
-              <div class="sub_title">Проведение свадьбы Вашей мечты в окружении природы!</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <section class="section_content">
       <div class="container">
         <ul class="breadcrumb">
           <li><a class="home" href="/"></a></li>
-          <li><a href="#">Частные праздники</a></li>
+          <li><a href="#">Модальное окно</a></li>
         </ul>
-        <h1 class="page_title">Свадьба</h1>
+        <h1 class="page_title">Модальное окно</h1>
         <div class="page_desc">
-          <p>Загородный клуб "Фестивальный" является одной из крупнейших площадок на рынке еvent - услуг Беларуси. Мы специализируемся на проведении корпоративных мероприятий (развлекательных и обучающих) и частных праздников, в основу которых ставим оригинальные сценарии, разрабатываемые нашей командой с учетом запросов гостей.</p>
-          <div id="more">Загородный клуб "Фестивальный" является одной из крупнейших площадок на рынке еvent - услуг Беларуси. Мы специализируемся на проведении корпоративных мероприятий (развлекательных и обучающих) и частных праздников, в основу которых ставим оригинальные сценарии, разрабатываемые нашей командой с учетом запросов гостей.</div>
-          <button class="show_more" id="show_more">Читать далее</button>
-        </div>
-        <div class="k2_slider">
-          <div>
-            <picture><img src="img/image_1.png"/></picture>
-          </div>
-          <div>
-            <picture><img src="img/image_1.png"/></picture>
-          </div>
-          <div>
-            <picture><img src="img/image_1.png"/></picture>
-          </div>
-        </div>
-        <div class="row row_icons_text">
-          <div class="col-12 col-sm-12 col-md-6 col-xl-4">
-            <div class="item">
-              <div>
-                <div class="icon" style="background: #F47D39;"><img src="img/i11.svg"/></div>
-                <div class="text">Подбор ведущего и шоу-программы</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-12 col-md-6 col-xl-8">
-            <div class="row">
-              <div class="col-12 col-sm-12 col-md-12 col-xl-6">
-                <div class="item">
-                  <div>
-                    <div class="icon" style="background: #43D97D;"><img src="img/i12.svg"/></div>
-                    <div class="text">Фото и видеосъёмка</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-sm-12 col-md-12 col-xl-6 mb-0">
-                <div class="item">
-                  <div>
-                    <div class="icon" style="background: #FDBB50;"><img src="img/i13.svg"/></div>
-                    <div class="text">Трансфер гостей из Минска</div>
-                  </div>
+          <button class="btn_default" data-toggle="modal" data-target="#feedback">Открыть</button>
+          <div class="modal fade" id="feedback" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <button class="close" data-dismiss="modal" aria-label="Close"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.5 2.0125L15.7375 0.25L8.75 7.2375L1.7625 0.25L0 2.0125L6.9875 9L0 15.9875L1.7625 17.75L8.75 10.7625L15.7375 17.75L17.5 15.9875L10.5125 9L17.5 2.0125Z" fill="#F47D39"/>
+</svg>
+                  </button>
+                  <p class="modal_title"><span>Отправить заявку</span></p>
+                  <form class="modal_form" id="order_call_form">
+                    <div class="row">
+                      <div class="col-12 field">
+                        <label>Имя <i class="necessarily">*</i></label>
+                        <input class="form-control" type="text" name="user_name1" id="user_name1" placeholder="Ваше имя" data-rule-required="true" data-msg-required="Введите ваше имя" required="required"/>
+                      </div>
+                      <div class="col-12 field">
+                        <label>Email</label>
+                        <input class="form-control" type="tel" name="email1" id="email1" placeholder="Контактный email"/>
+                      </div>
+                      <div class="col-12 field">
+                        <label>Телефон <i class="necessarily">*</i></label>
+                        <input class="form-control" type="tel" name="phone1" id="phone1" placeholder="+375 (__) ___ __ __" data-rule-required="true" data-msg-required="Введите номер телефона" required="required"/>
+                      </div>
+                      <div class="col-12 field">
+                        <label>Сообщение</label>
+                        <textarea class="form-control" placeholder="Ваше сообщение"></textarea>
+                      </div>
+                      <div class="col-12 btn_block">
+                        <button class="btn_default" type="submit">Отправить заявку</button>
+                      </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="container">
-          <div class="picture_text_btn">
-            <div>
-              <picture><img src="img/Frame1.svg"/></picture>
-              <div class="text">Хотите узнать больше? Смотрите видео в один клик!</div>
-            </div><a class="btn" data-fancybox="video" href="https://www.youtube.com/watch?v=T7iDc-L3D5g&amp;t=512s">Смотреть видео</a>
-          </div>
-        </div>
-      </div>
-      <div class="bg_orange">
-        <div class="container position-relative">
-          <div class="sub_title text-uppercase">Ресторан и проживание</div>
-          <div class="section_title">Дополнительные услуги</div>
-          <div class="row row_icons_text has_nav">
-            <div class="col-12 col-sm-12 col-md-12 col-xl-6">
-              <div class="item">
-                <div>
-                  <div class="icon" style="background: #43D97D;"><img src="img/i9.svg"/></div>
-                  <div class="text">Ресторан</div>
-                </div>
-                <ul class="menu">
-                  <li><a href="#">Основной зал</a></li>
-                  <li><a href="#">Основной зал</a></li>
-                  <li><a href="#">Основной зал</a></li>
-                  <li><a href="#">Основной зал</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-12 col-sm-12 col-md-12 col-xl-6">
-              <div class="item">
-                <div>
-                  <div class="icon" style="background: #FDBB50;"><img src="img/i10.svg"/></div>
-                  <div class="text">Проживание</div>
-                </div>
-                <ul class="menu">
-                  <li><a href="#">Основной зал</a></li>
-                  <li><a href="#">Основной зал</a></li>
-                  <li><a href="#">Основной зал</a></li>
-                  <li><a href="#">Основной зал</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="picture_text_btn">
-          <div>
-            <picture><img src="img/Frame2.svg"/></picture>
-            <div class="text">Хотите заказать услугу? Отправьте заявку и мы свяжемся с вами!</div>
-          </div>
-          <button class="btn" data-toggle="modal" data-target="#">Отправить заявку</button>
-        </div>
-      </div>
-      <div class="portfolio_list portfolio_slider">
-        <div class="portfolio_item"><a class="img_thumbnail" style="background-image:url(img/act1.jpg)">
-            <div class="g_title">День строителя 2018</div></a></div>
-        <div class="portfolio_item"><a class="img_thumbnail" style="background-image:url(img/act1.jpg)">
-            <div class="g_title">День строителя 2018</div></a></div>
-        <div class="portfolio_item"><a class="img_thumbnail" style="background-image:url(img/act1.jpg)">
-            <div class="g_title">День строителя 2018</div></a></div>
-        <div class="portfolio_item"><a class="img_thumbnail" style="background-image:url(img/act1.jpg)">
-            <div class="g_title">День строителя 2018</div></a></div>
-        <div class="portfolio_item"><a class="img_thumbnail" style="background-image:url(img/act1.jpg)">
-            <div class="g_title">День строителя 2018</div></a></div>
-        <div class="portfolio_item"><a class="img_thumbnail" style="background-image:url(img/act1.jpg)">
-            <div class="g_title">День строителя 2018</div></a></div>
-        <div class="portfolio_item"><a class="img_thumbnail" style="background-image:url(img/act1.jpg)">
-            <div class="g_title">День строителя 2018</div></a></div>
-        <div class="portfolio_item"><a class="img_thumbnail" style="background-image:url(img/act1.jpg)">
-            <div class="g_title">День строителя 2018</div></a></div>
-        <div class="portfolio_item"><a class="img_thumbnail" style="background-image:url(img/act1.jpg)">
-            <div class="g_title">День строителя 2018</div></a></div>
-        <div class="portfolio_item"><a class="img_thumbnail" style="background-image:url(img/act1.jpg)">
-            <div class="g_title">День строителя 2018</div></a></div>
       </div>
     </section>
     <section class="feedback">

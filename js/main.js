@@ -375,6 +375,8 @@ $(document).ready(function(){
     });
     $(window).resize();
 
+    $("#order_call_form").validate();
+
 
 });
 
