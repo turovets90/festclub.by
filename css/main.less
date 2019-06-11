@@ -1,3 +1,4 @@
+@import "bootstrap-datepicker";
 @import "fancybox";
 @import "slick-less";
 //@import "select2";
@@ -3966,5 +3967,195 @@ h1.page_title{
 
   .s_title{
     font-weight: @bold;
+  }
+}
+
+
+
+.individual_program_container{
+  background: #F5F5F5;
+  .border-radius(5px);
+  padding: 70px;
+  @media (max-width:1200px){
+    padding: 30px;
+  }
+  @media (max-width:767px){
+    padding: 30px 15px;
+  }
+  .title_icon{
+    .flex();
+    .ai-center();
+    margin-bottom: 45px;
+    @media (max-width:1200px){
+      margin-bottom: 30px;
+    }
+    img{
+      @media (max-width:1200px){
+        max-height: 55px;
+      }
+      @media (max-width:767px){
+        max-height: 40px;
+      }
+    }
+    .title{
+      font-size: 36px;
+      color: @dark;
+      margin-left: 35px;
+      @media (max-width:1200px){
+        font-size: 30px;
+        margin-left: 20px;
+      }
+      @media (max-width:767px){
+        font-size: 25px;
+        margin-left: 10px;
+      }
+      @media (max-width:575px){
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+
+
+
+
+.individual_program_form{
+
+
+  .field{
+    margin-bottom: 35px;
+    @media (max-width:767px){
+      margin-bottom: 20px;
+    }
+  }
+  label{
+    font-size: 18px;
+    font-weight: @bold;
+    color: @dark;
+    margin-bottom: 20px;
+    @media (max-width:1200px){
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    span{
+      color: @orange;
+    }
+  }
+
+
+  .input-group{
+    padding: 0;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    .input-group-addon{
+      width: 70px;
+      height:55px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 4;
+      @media (max-width:767px){
+        height: 45px;
+      }
+      &:before{
+        .b_a();
+        .m_a();
+        width: 18px;
+        height: 18px;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12 7.27026H14V9.06318H12V7.27026ZM8 7.27026H10V9.06318H8V7.27026ZM4 7.27026H6V9.06318H4V7.27026ZM2 1.92427H3V0.131348H5V1.92427H13V0.131348H15V1.92427H16C17.11 1.92427 18 2.73109 18 3.7172V15.3384C18 15.8139 17.7893 16.27 17.4142 16.6062C17.0391 16.9425 16.5304 17.1313 16 17.1313H2C1.46957 17.1313 0.960859 16.9425 0.585785 16.6062C0.210712 16.27 0 15.8139 0 15.3384V3.7172C0 3.24169 0.210712 2.78565 0.585785 2.44941C0.960859 2.11317 1.46957 1.92427 2 1.92427ZM2 15.3384H16V5.47733H2V15.3384Z' fill='%23F47D39'/%3e%3c/svg%3e");
+      }
+    }
+  }
+
+  .form-control{
+    background: #FFFFFF;
+    .border-radius(3px);
+    border:0;
+    color: @dark;
+    font-size: 16px;
+    height: 55px;
+    width: 100%;
+    padding: 0.375rem 1.9rem;
+    @media (max-width:767px){
+      height: 45px;
+    }
+    &:hover, &:focus{
+      box-shadow: none;
+      outline: none;
+    }
+
+    &::-webkit-input-placeholder{
+      color: #898C94;
+      font-size: 16px;
+    }
+    &::-moz-placeholder{ color: #898C94;
+      font-size: 16px;}
+    &::-ms-input-placeholder{ color: #898C94;
+      font-size: 16px;}
+    &:-moz-placeholder{ color: #898C94;
+      font-size: 16px;}
+    &:-ms-input-placeholder{ color: #898C94;
+      font-size: 16px;}
+  }
+
+
+
+  .input_radio_group{
+    .flex();
+    .input_radio{
+      position: relative;
+      margin-right: 90px;
+      input{
+        opacity: 0;
+        position: absolute;
+        &:checked{
+          +label{
+            &:before{
+              border: 5px solid @orange;
+            }
+          }
+        }
+        +label{
+          font-size: 16px;
+          font-weight: @regular;
+          position: relative;
+          padding-left: 30px;
+          margin-bottom: 0;
+          &:before{
+            .b_a();
+            border: 1px solid #898C94;
+            width: 16px;
+            height: 16px;
+            .border-radius(50%);
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+          }
+          &:after{}
+        }
+      }
+    }
+  }
+
+
+}
+
+
+
+.btn_default{
+  border:0;
+  background: linear-gradient(35.3deg, #E84C0A 0%, #FAB74D 99.94%);
+  .border-radius(55px);
+  font-size: 18px;
+  color: #fff;
+  font-weight: @bold;
+  width: 100%;
+  max-width: 270px;
+  padding: 20px;
+  @media (max-width:767px){
+    padding: 10px;
   }
 }

@@ -2,3 +2,4 @@
 *.pug
 inc/
 design/
+lib/
