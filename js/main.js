@@ -42,9 +42,9 @@ $(document).ready(function(){
             dots:true,
             fade:true,
             infinite:false,
+            autoplay: true,
             //speed: 1000,
-            //autoplay: true,
-            //autoplaySpeed: 2000,
+            autoplaySpeed:9000,
         });
     }
 
