@@ -321,6 +321,9 @@ header{
   height: 40px;
   min-width: 40px;
   position: relative;
+ &:hover, &:focus{
+    opacity: 0.5;
+ }
   &:before{
     .b_a();
     .m_a();
@@ -1556,7 +1559,7 @@ background: url(../img/pr_bg.png);
   }
   &:before{
     .b_a();
-    background: url(../img/rewievs_bg.svg);
+    background: url(../img/rewievs_bg.png);
     height: 358px;
     width: 100%;
     left: 0;
@@ -1941,7 +1944,7 @@ background: url(../img/pr_bg.png);
 
 
 .news{
-  background: url(../img/news_bg.svg);
+  background: url(../img/news_bg.png);
   background-size: cover;
   background-position: center;
 }
@@ -2292,7 +2295,7 @@ background: url(../img/pr_bg.png);
 
 
 .feedback{
-  background: url(../img/rewievs_bg.svg);
+  background: url(../img/rewievs_bg.png);
   background-size: cover;
   background-position: center;
   height: 350px;
@@ -2331,6 +2334,10 @@ background: url(../img/pr_bg.png);
     width: 100%;
     max-width: 270px;
     padding: 18px;
+    .transition(@transition_default);
+    &:hover, &:focus{
+      background: #EEEFF1;
+    }
     @media (max-width:767px){
       padding: 12px;
     }
@@ -2778,6 +2785,13 @@ h1.page_title{
     max-width: 300px;
     padding: 17px;
     border:0;
+    .transition(@transition_default);
+    &:hover, &:focus{
+      background: linear-gradient(32.71deg, #FAB74D 0%, #E84C0A 99.94%);
+    }
+    &:before{
+      display: none;
+    }
     @media (max-width:1200px){
       padding: 12px;
     }
@@ -2949,7 +2963,7 @@ h1.page_title{
 
 
 .grey_bg{
-  background: url(../img/news_bg.svg);
+  background: url(../img/news_bg.png);
   background-size: cover;
   background-position: center;
   padding-top: 1px;
@@ -3516,6 +3530,7 @@ h1.page_title{
     div{
       &[class^="col"]{
         margin-bottom: 7px;
+
       }
     }
   }
@@ -3523,6 +3538,9 @@ h1.page_title{
   div{
     &[class^="col"]{
       padding: 0 7px;
+      @media (min-width:1200px){
+        min-width: 300px;
+      }
     }
   }
   .programm_item{
@@ -3852,7 +3870,7 @@ h1.page_title{
   &:before{
     content: '';
     position: absolute;
-    background: url(../img/rewievs_bg.svg);
+    background: url(../img/rewievs_bg.png);
     height: 358px;
     width: 100%;
     left: 0;
@@ -4242,6 +4260,7 @@ h1.page_title{
   &:hover, &:focus{
     color: #fff;
     text-decoration: none;
+    background: linear-gradient(35.3deg, #FAB74D 0%, #E84C0A 99.94%);
   }
   @media (max-width:767px){
     padding: 10px;
@@ -4775,4 +4794,24 @@ a[data-fancybox]{
 
   }
 
+}
+
+
+.main_menu li{
+  &.d_none{
+    @media (min-width:992px){
+      display: none;
+    }
+  }
+  &.show_all{
+    color: @orange;
+    text-decoration: underline;
+    cursor: pointer;
+    @media (max-width:991px){
+      display: none;
+    }
+    &:hover, &:focus{
+      text-decoration: none;
+    }
+  }
 }
